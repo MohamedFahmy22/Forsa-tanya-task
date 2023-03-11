@@ -3,20 +3,20 @@
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Forsa tanya Task Refactoring Code</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> 
+
+    It's a task from ForsaThanya Company talking about check and solve PHP code which has some issues. 
     <br> 
 </p>
 
@@ -34,81 +34,53 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is a PHP class called "ItemReader" that takes in a filename and a format as parameters in its constructor. It has a method called "readItems" which reads the content of the file and converts it into an array of "Item" objects based on the given format.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## 🏁 How good is this code and give a rate from 1 to 10? <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+My rating to this code is 7/10.
 
-### Prerequisites
+### 🚀 Do you think the code quality has problems? if yes what are these problems?
 
-What things you need to install the software and how to install them.
+Yes the code has a problems 
 
-```
-Give examples
-```
+1 - In the previous ItemReader class, the XML file is parsed using the SimpleXMLElement class provided by PHP. This class converts the XML code to a PHP object, which can then be traversed and used to extract data.
+
+2 - In the new version of the class, the XML file is parsed using a custom xmlRead class, which is not provided by PHP. It's not clear what the implementation of this class is, but it seems to provide a method getElements() that returns an array of objects representing the elements in the XML file. The objects seem to have properties like _id and item_name, which are used to extract data for the Item objects.
+
+3 - The JSON parsing is the same in both classes, using json_decode() function to convert the JSON string to a PHP object or array.
+
+4 - You are using Item Class which doesn't exist
+
+5 - You are using InvalidFormatException Class which doesn't exist
+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+To install the previous code, you need to save it in a file with a .php extension and put it in a directory accessible by your web server.
 
-Say what the step will be
+Assuming you have Apache web server installed, you can place the file in the htdocs directory of your Apache installation. Then, you can access it in your web browser by navigating to http://localhost/index.php.
 
-```
-Give the example
-```
+You can also use a PHP development environment like XAMPP or WAMP to create a local server for testing and development purposes. These environments come with Apache web server and PHP pre-installed and configured, so you just need to install them and place your PHP file in the htdocs directory of the installation.
 
-And repeat
 
 ```
-until finished
+http://localhost/Forsa%20Tanya%20Task/index.php
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+and you can change the format of the file and the name from ItemReader.
 
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
-Give an example
+ItemReader('items.json', 'json');
+ItemReader('items.xml', 'xml');
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [PHP](https://www.php.net/) - PHP
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@MohamedFahmy22](https://github.com/MohamedFahmy22) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
